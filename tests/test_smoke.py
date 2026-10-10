@@ -15,3 +15,9 @@ def test_unknown():
 
 def test_empty():
     assert reply("   ") == "Please type a question."
+
+def test_math_lookup():
+    assert "I.603" in reply("Where is the Faculty of Math & Computer Science?")
+    
+def test_student_lookup():
+    assert "I.604" in reply("Where is the Faculty of Information Technology?")
