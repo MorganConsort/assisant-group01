@@ -23,4 +23,4 @@ Prerequisites: Python 3.10+, Git
 
 ## Project structure
 
-TODO
+
