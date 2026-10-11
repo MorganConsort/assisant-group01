@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """Check that the development environment is set up correctly.
 
 Run from the repository root:  python scripts/check_env.py
