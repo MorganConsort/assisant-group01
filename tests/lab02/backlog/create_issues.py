@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """Create the Lab 2 backlog in your team repository with the GitHub CLI.
 
 Usage (inside the team repo, after `gh auth login`):
@@ -12,7 +11,6 @@ import csv
 import os
 import ssl
 import subprocess
-
 
 ssl._create_default_https_context = ssl._create_unverified_context
 os.environ["PYTHONHTTPSVERIFY"] = "0"
