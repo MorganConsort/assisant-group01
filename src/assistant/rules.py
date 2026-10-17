@@ -14,7 +14,10 @@ HELP = {"Help", "help!", "Cuu voi", "Giup toi", "Giup", "help"}
 def load_offices(path: Path = DATA_DIR / "offices.csv") -> dict[str, dict[str, str]]:
     """Return {office_name_lower: row} from the offices CSV."""
     with path.open(encoding="utf-8", newline="") as f:
-        return {row["name"].lower(): row for row in csv.DictReader(f)}
+        return {
+            row["name"].strip().lower(): {k.strip(): v.strip() for k, v in row.items()}
+            for row in csv.DictReader(f)
+        }
 
 
 def reply(message: str, offices: dict[str, dict[str, str]] | None = None) -> str:
