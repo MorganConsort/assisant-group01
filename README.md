@@ -74,6 +74,22 @@ Expected result:
 4 passed
 ```
 
+## Evaluation
+
+Run the benchmark evaluation suite against the predefined questions in `eval/cases.csv`:
+
+```bash
+python eval/run.py
+```
+
+Expected output:
+
+```
+Running benchmark on 15 test cases from cases.csv...
+...
+Overall accuracy: 15/15 (100.00%)
+```
+
 ## Project structure
 
 ```
