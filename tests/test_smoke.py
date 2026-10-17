@@ -21,6 +21,12 @@ def test_generic_office_word_is_not_a_partial_match():
     assert "don't know" in reply("Where is the office?")
 
 
+def test_help():
+    answer = reply("help")
+    assert "where" in answer
+    assert "when" in answer
+
+
 def test_unknown():
     assert "don't know" in reply("what is the meaning of life")
 

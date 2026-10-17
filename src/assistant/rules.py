@@ -9,7 +9,7 @@ DATA_DIR = Path(__file__).resolve().parents[2] / "data"
 
 GREETINGS = {"hi", "hello", "hey", "xin chao", "chao", "good morning", "chao buoi sang"}
 
-HELP = {"Help", "help!", "Cuu voi", "Giup toi", "Giup", "help"}
+HELP_COMMANDS = {"help", "cuu voi", "giup toi", "giup"}
 
 # These words describe an organization rather than identify a particular office.
 GENERIC_OFFICE_WORDS = {"faculty", "office"}
@@ -55,8 +55,11 @@ def reply(message: str, offices: dict[str, dict[str, str]] | None = None) -> str
         return "Please type a question."
     if text in GREETINGS:
         return "Hello!!! Ask me where an office is, or when it opens."
-    if text in HELP:
-        return "Hey! I will try my best to help you! Ask me where an office is, or when it opens."
+    if text in HELP_COMMANDS:
+        return (
+            "I can tell you where an office is and when it opens. "
+            "Try 'Where is the Training Office?'"
+        )
     offices = offices if offices is not None else load_offices()
     office = _find_office(text, offices)
     if office is not None:
