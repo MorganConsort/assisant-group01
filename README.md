@@ -50,6 +50,18 @@ Expected output:
 Library: room B.201, open Mon-Sat: 07:00-20:00
 ```
 
+Use the `help` command to see what the assistant can do:
+
+```bash
+python -m assistant "help"
+```
+
+Expected output:
+
+```
+I can tell you where an office is and when it opens. Try 'Where is the Training Office?'
+```
+
 ## Test
 
 ```bash
