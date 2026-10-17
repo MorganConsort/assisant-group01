@@ -9,9 +9,10 @@ two.
 """
 import argparse
 import csv
-import subprocess
 import os
 import ssl
+import subprocess
+
 
 ssl._create_default_https_context = ssl._create_unverified_context
 os.environ["PYTHONHTTPSVERIFY"] = "0"
